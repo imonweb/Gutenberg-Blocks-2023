@@ -176,3 +176,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/*  Gutenberg Blocks Framework */
+/*  https://wellmann.github.io/gutenberg-blocks-framework/setup.html */
+// $frameworkLoader = new KWIO\GutenbergBlocksFramework\Loader(__FILE__);
+// $frameworkLoader
+//     ->loadBlocks('src/', __NAMESPACE__) // __NAMESPACE__ should match the namespace of your block classes.
+//     ->init();
+
+/* Then run: $ composer require kwio/gutenberg-blocks-framework */
