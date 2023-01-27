@@ -1,0 +1,12 @@
+//@import "variables";
+//@import "utils";
+
+div[style] > .components-placeholder {
+  width: inherit;
+  height: inherit;
+  min-height: 0;
+}
+
+.edit-post-visual-editor {
+  //@import "button"; // Nesting for higher specificity to override WordPress default styles.
+}
