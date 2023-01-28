@@ -114,6 +114,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	color: #eee;
 }
 
+.has-red-to-blue-gradient-background {
+	background: linear-gradient(135deg,#e4064d 0%, #2c59ee 100%);
+}
+
+.has-green-to-yellow-gradient-background {
+	background: linear-gradient(135deg,#3ce406 0%, #d6e029 100%);
+}
+
 /*  Add custom styles end */
 
 

@@ -50,12 +50,30 @@ function imon_setup() {
 				'slug'	=>	'red-to-blue'
 			),
 			array(
-				'name'	=>	esc_attr__( 'Red to Blue', 'themeLangDomain' ),
+				'name'	=>	esc_attr__( 'Yellow to Green', 'themeLangDomain' ),
 				'gradient'	=>	'linear-gradient(135deg,#3ce406 0%, #d6e029 100%)',
 				'slug'	=>	'green-to-yellow'
 			),
 		)
 	);
+
+	add_theme_support( 'editor-font-sizes', array(
+		array(
+			'name'	=>	esc_attr__( 'Small', 'themeLangDomain' ),
+			'size'	=>	12,
+			'slug'	=>	'small'
+		),
+		array(
+			'name'	=>	esc_attr__( 'Regular', 'themeLangDomain' ),
+			'size'	=>	16,
+			'slug'	=>	'regular'
+		),
+		array(
+			'name'	=>	esc_attr__( 'Large', 'themeLangDomain' ),
+			'size'	=>	36,
+			'slug'	=>	'large'
+		),
+	));
 
 
 
