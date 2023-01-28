@@ -1,0 +1,13 @@
+/*  Style-editor for block editor - back-end */
+body {
+  background-color: #c9e5f0;
+  font-family: "Poppins", sans-serif;
+}
+
+.wp-block {
+  max-width: 800px;
+}
+
+.wp-block[data-align=full] {
+  max-width: none;
+}

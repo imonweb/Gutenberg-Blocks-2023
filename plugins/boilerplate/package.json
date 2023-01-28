@@ -7,12 +7,13 @@
 	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build",
-		"format": "wp-scripts format",
+		"format": "wp-scripts format && stylelint \"**/*.scss\" --fix",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start"
+		"start": "wp-scripts start",
+		"prepare": "husky install"
 	},
 	"prettier": "@wordpress/prettier-config",
 	"stylelint": {
@@ -23,6 +24,7 @@
 		"@wordpress/prettier-config": "^2.8.0",
 		"@wordpress/scripts": "^25.2.0",
 		"@wordpress/stylelint-config": "^21.8.0",
-		"eslint-config-prettier": "^8.6.0"
+		"eslint-config-prettier": "^8.6.0",
+		"husky": "^8.0.3"
 	}
 }

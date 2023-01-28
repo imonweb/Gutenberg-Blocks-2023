@@ -67,11 +67,56 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+/*  Add custom styles */
 .site {
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.alignwide {
+	margin-left: -100px;
+	margin-right: -100px;
+}
+
+.alignfull {
+	margin-left: calc( -1 * (100vw - 800px) / 2);
+	margin-right: calc( -1 * (100vw - 800px) / 2);
+}
+
+@media screen and (max-width: 800px){
+	.alignfull {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	.alignwide {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.has-strong-magenta-background-color {
+	background-color: #a156b4;
+}
+
+.has-strong-magenta-color {
+	color: #a156b4;
+}
+
+.has-very-light-gray-background-color {
+	background-color: #eee;
+}
+
+.has-very-light-gray-color {
+	color: #eee;
+}
+
+/*  Add custom styles end */
+
+
 
 html {
 	line-height: 1.15;

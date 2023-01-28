@@ -20,6 +20,46 @@ if ( ! defined( '_S_VERSION' ) ) {
  * as indicating support for post thumbnails.
  */
 function imon_setup() {
+
+	add_theme_support( "editor-styles" );
+	add_editor_style('style-editor.css');
+
+	add_theme_support( "responsive-embeds" );
+	add_theme_support( "align-wide" );
+
+	add_theme_support( 'editor-color-palette', array(
+		array(
+			'name'	=>	esc_attr__('strong magenta', 'themeLangDomain'),
+			'slug'	=>	'strong-magenta',
+			'color'	=>	'#a156b4',	
+		),
+		array(
+			'name'	=>	esc_attr__('very light gray', 'themeLangDomain'),
+			'slug'	=>	'very-light-gray',
+			'color'	=>	'#eee',
+		),
+	));
+
+	add_theme_support( 'disable-custom-colors' );
+
+	add_theme_support( 'editor-gradient-presets',
+		array(
+			array(
+				'name'	=>	esc_attr__( 'Red to Blue', 'themeLangDomain' ),
+				'gradient'	=>	'linear-gradient(135deg,#e4064d 0%, #2c59ee 100%)',
+				'slug'	=>	'red-to-blue'
+			),
+			array(
+				'name'	=>	esc_attr__( 'Red to Blue', 'themeLangDomain' ),
+				'gradient'	=>	'linear-gradient(135deg,#3ce406 0%, #d6e029 100%)',
+				'slug'	=>	'green-to-yellow'
+			),
+		)
+	);
+
+
+
+
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
