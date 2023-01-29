@@ -11,10 +11,10 @@
 # *.sass-cache
 # .env
 node_modules/
-.tmp/
+# .tmp/
 
 # OS or Editor folders
-.DS_Store
+# .DS_Store
 # Thumbs.db
 # .cache
 # .project
