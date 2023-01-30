@@ -6,7 +6,7 @@ import {
 	AlignmentToolbar,
 	InspectorControls
 } from '@wordpress/block-editor';
-import {__experimentalBoxControl as BoxControl, PanelBody, RadioControl, RangeControl} from '@wordpress/components';
+import {__experimentalBoxControl as BoxControl, PanelBody, RangeControl} from '@wordpress/components';
 import classnames from 'classnames';
 import './editor.scss';
 
@@ -34,17 +34,18 @@ export default function Edit(props) {
 
 	const classes = classnames(`text-box-align-${ alignment }`, {
 		'has-shadow': shadow,
+		[`shadow-opacity-${shadowOpacity}`]: shadow && shadowOpacity,
 	})
 
 	return (
 		<>
 			<InspectorControls>
-				{ shadow && (
+				{ shadow && ( 
 				<PanelBody
 					title={__('Shadow Setting', 'text-box')}
 				>
 					<RangeControl 
-						label={__('Shadow Setting', 'text-box')}
+						label={__('Shadow Opacity', 'text-box')}
 						val={shadowOpacity}
 						min={10}
 						max={40}
@@ -76,7 +77,7 @@ export default function Edit(props) {
 				onChange={ onChangeText }
 				value={text}
 				placeholder={__("Your Text", 'text-box')} 
-				tagName="h4"
+				tagName="p"
 				allowedFormats={[]}
 			/>
 		</>
