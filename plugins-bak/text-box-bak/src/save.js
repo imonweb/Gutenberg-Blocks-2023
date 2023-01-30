@@ -1,5 +1,5 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
-import classnamees from "classnames";
+import classnames from "classnames";
 
 export default function save({attributes}) {
 	const { text, alignment } = attributes;

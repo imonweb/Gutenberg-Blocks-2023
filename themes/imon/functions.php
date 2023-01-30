@@ -40,7 +40,8 @@ function imon_setup() {
 		),
 	));
 
-	add_theme_support( 'disable-custom-colors' );
+	// add_theme_support( 'disable-custom-colors' );
+	// add_theme_support( 'disable-custom-gradients' );
 
 	add_theme_support( 'editor-gradient-presets',
 		array(
@@ -74,6 +75,8 @@ function imon_setup() {
 			'slug'	=>	'large'
 		),
 	));
+
+	add_theme_support('custom-spacing');
 
 
 

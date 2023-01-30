@@ -3,8 +3,10 @@ import {
 	useBlockProps, 
 	RichText, 
 	BlockControls, 
-	AlignmentToolbar, 
+	AlignmentToolbar,
+	InspectorControls
 } from '@wordpress/block-editor';
+import {__experimentalBoxControl as BoxControl, PanelBody} from '@wordpress/components';
 import './editor.scss';
 
 export default function Edit(props) {
@@ -23,6 +25,11 @@ export default function Edit(props) {
 
 	return (
 		<>
+			{/* <InspectorControls>
+				<PanelBody>
+					<BoxControl onChange={(v) => console.log(v)}/>
+				</PanelBody>
+			</InspectorControls> */}
 		  
 			<BlockControls>
 				<AlignmentToolbar
