@@ -3,16 +3,16 @@ import {
 	useBlockProps, 
 	RichText, 
 	BlockControls, 
-	InspectorControls, 
 	AlignmentToolbar, 
-	PanelColorSettings,
-	ContrastChecker, 
 } from '@wordpress/block-editor';
 import './editor.scss';
 
-export default function Edit({attributes, setAttributes}) {
+export default function Edit(props) {
+	const { attributes, setAttributes } = props;
 	// console.log(attributes);
-	const {text, alignment, backgroundColor, textColor } = attributes;
+	const {text, alignment } = attributes;
+
+	// console.log(attributes, props);
 
 	const onChangeAlignment = ( newAlignment ) => {
 		setAttributes( { alignment: newAlignment } );
@@ -21,41 +21,9 @@ export default function Edit({attributes, setAttributes}) {
 		setAttributes( {text: newText} )
 	}
 
-	const onBackgroundColorChange = (newBGColor) => {
-		setAttributes({ backgroundColor: newBGColor} );
-	};
-	const onTextColorChange = (newTextColor) => {
-		setAttributes({ textColor: newTextColor} );
-	};
-
 	return (
 		<>
-			<InspectorControls>
-				<PanelColorSettings
-					title={__("Color Settings", "text-box" )}
-					icon="admin-appearance"
-					initialOpen
-					disableCustomColors={ false }
-					colorSettings={[
-						{
-							value: backgroundColor,
-							onChange: onBackgroundColorChange,
-							label: __("Background Color", "text-box"),
-						},
-						{
-							value: textColor,
-							onChange: onTextColorChange,
-							label: __("Text Color", "text-box"),
-						}
-					]}
-				>
-					<ContrastChecker
-						textColor={ textColor }
-						backgroundColor={ backgroundColor }
-					/>
-				</PanelColorSettings>
-			</InspectorControls>
-
+		  
 			<BlockControls>
 				<AlignmentToolbar
 					value={alignment}
@@ -64,11 +32,7 @@ export default function Edit({attributes, setAttributes}) {
 			</BlockControls>
 		 
 			<RichText {...useBlockProps({
-				className: `text-box-align-${alignment}`,
-				style: {
-					backgroundColor,
-					color: textColor
-				},
+				className: `text-box-align-${alignment}`
 			}) } 
 				onChange={ onChangeText }
 				value={text}
@@ -79,3 +43,5 @@ export default function Edit({attributes, setAttributes}) {
 		</>
 		);
 }
+
+ 
