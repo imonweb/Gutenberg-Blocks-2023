@@ -6,13 +6,14 @@ import {
 	AlignmentToolbar,
 	InspectorControls
 } from '@wordpress/block-editor';
-import {__experimentalBoxControl as BoxControl, PanelBody} from '@wordpress/components';
+import {__experimentalBoxControl as BoxControl, PanelBody, RadioControl, RangeControl} from '@wordpress/components';
+import classnames from 'classnames';
 import './editor.scss';
 
 export default function Edit(props) {
-	const { attributes, setAttributes } = props;
+	const { attributes, setAttributes} = props;
 	// console.log(attributes);
-	const {text, alignment } = attributes;
+	const {text, alignment, shadow, shadowOpacity } = attributes;
 
 	// console.log(attributes, props);
 
@@ -23,15 +24,46 @@ export default function Edit(props) {
 		setAttributes( {text: newText} )
 	}
 
+	const onChangeShadowOpacity = (newShadowOpacity) => {
+		setAttributes( {shadowOpacity: newShadowOpacity});
+	}
+
+	const toggleShadow = () => {
+		setAttributes( {shadow: ! shadow} )
+	}
+
+	const classes = classnames(`text-box-align-${ alignment }`, {
+		'has-shadow': shadow,
+	})
+
 	return (
 		<>
-			{/* <InspectorControls>
-				<PanelBody>
-					<BoxControl onChange={(v) => console.log(v)}/>
+			<InspectorControls>
+				{ shadow && (
+				<PanelBody
+					title={__('Shadow Setting', 'text-box')}
+				>
+					<RangeControl 
+						label={__('Shadow Setting', 'text-box')}
+						val={shadowOpacity}
+						min={10}
+						max={40}
+						step={10}
+						onChange={ onChangeShadowOpacity }
+					/>
+					{/* <BoxControl onChange={(v) => console.log(v)}/> */}
 				</PanelBody>
-			</InspectorControls> */}
+				)}
+			</InspectorControls>
 		  
-			<BlockControls>
+			<BlockControls controls={[
+				{
+					icon: "admin-page",
+					title: __("Shadow", "text-box"),
+					onClick: toggleShadow,
+					isActive: shadow,
+				},
+			]}>
 				<AlignmentToolbar
 					value={alignment}
 					onChange={onChangeAlignment}
@@ -39,7 +71,7 @@ export default function Edit(props) {
 			</BlockControls>
 		 
 			<RichText {...useBlockProps({
-				className: `text-box-align-${alignment}`
+				className: classes,
 			}) } 
 				onChange={ onChangeText }
 				value={text}
