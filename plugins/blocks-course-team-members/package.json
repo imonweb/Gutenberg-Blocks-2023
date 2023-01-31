@@ -21,6 +21,7 @@
 		"@wordpress/scripts": "^25.2.0"
 	},
 	"dependencies": {
+		"@wordpress/blob": "^3.25.0",
 		"@wordpress/components": "^23.2.0"
 	}
 }
