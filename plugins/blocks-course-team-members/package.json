@@ -19,5 +19,8 @@
 		"@wordpress/blocks": "^12.2.0",
 		"@wordpress/i18n": "^4.25.0",
 		"@wordpress/scripts": "^25.2.0"
+	},
+	"dependencies": {
+		"@wordpress/components": "^23.2.0"
 	}
 }
