@@ -1,18 +1,16 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
 	"name": "blocks-course/team-members",
-	"version": "0.1.0",
 	"title": "Team Members",
 	"category": "media",
 	"icon": "groups",
-	"description": "A Team Members grid.",
+	"description": "A team members grid.",
 	"keywords": ["Team", "Members", "Grid"],
 	"supports": {
 		"html": false
 	},
 	"textdomain": "team-members",
-	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css"
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
 }

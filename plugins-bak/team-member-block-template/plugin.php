@@ -1,16 +1,16 @@
 <?php
 /**
- * Plugin Name:       Blocks Course Team Members
- * Description:       Example block scaffolded with Create Block tool.
+ * Plugin Name:       Team Members
+ * Description:       A Team Members grid..
  * Requires at least: 6.1
  * Requires PHP:      7.0
  * Version:           0.1.0
- * Author:            The WordPress Contributors
+ * Author:            Imon Dela Rosa
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       blocks-course-team-members
+ * Text Domain:       team-members
  *
- * @package           create-block
+ * @package           blocks-course
  */
 
 /**
@@ -20,7 +20,8 @@
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function create_block_blocks_course_team_members_block_init() {
+function blocks_course_team_members_block_init() {
 	register_block_type( __DIR__ . '/build' );
+	// register_block_type_from_metadata( __DIR__ );
 }
-add_action( 'init', 'create_block_blocks_course_team_members_block_init' );
+add_action( 'init', 'blocks_course_team_members_block_init' );

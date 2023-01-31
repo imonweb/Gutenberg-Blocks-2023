@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "title": "Team Members",
   "category": "media",
-  "icon": "groups",
+  "icon": "admin-users",
   "description": "A Team Members grid.",
   "keywords": [
     "Team",
