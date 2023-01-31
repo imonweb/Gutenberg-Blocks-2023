@@ -28,7 +28,7 @@ registerBlockType('blocks-course/text-box', {
 				transform: (  { content, align } ) => {
 					  return createBlock( 'blocks-course/text-box', {
 						text: content,
-						alignment: align,
+						textAlignment: align,
 					} );
 				},
 			},
@@ -57,10 +57,10 @@ registerBlockType('blocks-course/text-box', {
 				isMatch: ( { text } ) => {
 					return text ? true : false;
 				},
-				transform: ( { text, alignment } ) => {
+				transform: ( { text, textAlignment } ) => {
 					return createBlock( 'core/paragraph', {
 						content: text,
-						align: alignment,
+						align: textAlignment,
 					} );
 				},
 			},	
