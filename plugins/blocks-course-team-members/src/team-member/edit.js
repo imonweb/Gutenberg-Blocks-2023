@@ -20,6 +20,14 @@ export default function Edit( {attributes, setAttributes} ) {
     setAttributes( {url: image.url, id: image.id, alt: image.alt})
   }
   console.log(url);
+
+  const onSelectURL = (newURL) => {
+    setAttributes({
+      url: newURL,
+      id: undefined,
+      alt: '',
+    })
+  }
   return (
     <div {...useBlockProps}>
       {
@@ -34,7 +42,7 @@ export default function Edit( {attributes, setAttributes} ) {
       <MediaPlaceholder 
         icon="admin-users"
         onSelect={onSelectImage}
-        onSelectURL={(val) => console.log(val)}
+        onSelectURL={ onSelectURL }
         onError={(err) => console.log(err)}
         accept="image/*"
         allowedTypes={["image"]}
