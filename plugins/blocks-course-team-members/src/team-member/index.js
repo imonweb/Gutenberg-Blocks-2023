@@ -1,6 +1,7 @@
 import { registerBlockType } from '@wordpress/blocks';
 import { __ } from '@wordpress/i18n';
 import Edit from "./edit";
+import Save from "./save";
 
 registerBlockType('blocks-course/team-member', {
   title: __("Team Member", "team-members"),
@@ -24,5 +25,5 @@ registerBlockType('blocks-course/team-member', {
     },
   },
   edit: Edit, 
-  save: () => <p>save</p>
+  save: Save
 })

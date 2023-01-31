@@ -16,12 +16,14 @@ export default function Edit( {attributes, setAttributes} ) {
         tagName="h4"
         onChange={onChangeName}
         value={ name }
+        allowedFormats={[]}
       />
       <RichText 
         placeholder={ __("Member Bio", "team-member") }
         tagName="p"
         onChange={onChangeBio}
         value={ bio }
+        allowedFormats={[]}
       />
   </div>
   );
