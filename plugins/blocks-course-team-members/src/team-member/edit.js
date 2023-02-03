@@ -1,10 +1,14 @@
+import { useEffect, useState } from "@wordpress/element"
 import { useBlockProps, RichText, MediaPlaceholder } from "@wordpress/block-editor"
 import { __ } from '@wordpress/i18n'
-import { isBlobURL } from '@wordpress/blob'
-import { Spinner } from '@wordpress/components' 
+import { isBlobURL, revokeBlobURL } from '@wordpress/blob'
+import { Spinner, withNotices } from '@wordpress/components' 
 
-export default function Edit( {attributes, setAttributes} ) {
-  const {name, bio, url, alt} = attributes;
+function Edit( {attributes, setAttributes, noticeOperations, noticeUI} ) {
+  
+  const {name, bio, url, alt, id} = attributes;
+  const [blobURL, setBlobURL] = useState();
+
   const onChangeName = (newName) =>{
     setAttributes({name: newName})
   }
@@ -28,6 +32,29 @@ export default function Edit( {attributes, setAttributes} ) {
       alt: '',
     })
   }
+
+  const onUploadError = (message) => {
+    noticeOperations.removeAllNotices();
+    noticeOperations.createErrorNotice(message)
+  }
+
+  useEffect( () => {
+    if(!id && isBlobURL(url)){
+      setAttributes({
+        url: undefined,
+        alt: '',
+      })
+    }
+  }, [])
+
+  useEffect(() => {
+    if(isBlobURL(url)){
+      setBlobURL(url);
+    } else {
+      revokeBlobURL(blobURL);
+      setBlobURL();
+    }
+  }, [url]) 
   return (
     <div {...useBlockProps}>
       {
@@ -43,10 +70,11 @@ export default function Edit( {attributes, setAttributes} ) {
         icon="admin-users"
         onSelect={onSelectImage}
         onSelectURL={ onSelectURL }
-        onError={(err) => console.log(err)}
-        accept="image/*"
+        onError={ onUploadError }
+        // accept="image/*"
         allowedTypes={["image"]}
         disableMediaButtons={url}
+        notices={noticeUI}
       />
       <RichText 
         placeholder={ __("Member Name", "team-member") }
@@ -65,3 +93,5 @@ export default function Edit( {attributes, setAttributes} ) {
   </div>
   );
 }
+
+export default withNotices(Edit);
