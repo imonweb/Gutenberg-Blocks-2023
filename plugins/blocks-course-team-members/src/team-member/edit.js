@@ -1,8 +1,8 @@
 import { useEffect, useState } from "@wordpress/element"
-import { useBlockProps, RichText, MediaPlaceholder, BlockControls, MediaReplaceFlow } from "@wordpress/block-editor"
+import { useBlockProps, RichText, MediaPlaceholder, BlockControls, MediaReplaceFlow, InspectorControls } from "@wordpress/block-editor"
 import { __ } from '@wordpress/i18n'
 import { isBlobURL, revokeBlobURL } from '@wordpress/blob'
-import { Spinner, withNotices } from '@wordpress/components' 
+import { Spinner, withNotices, ToolbarButton, PanelBody, TextareaControl } from '@wordpress/components' 
 
 function Edit( {attributes, setAttributes, noticeOperations, noticeUI} ) {
   
@@ -38,6 +38,18 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI} ) {
     noticeOperations.createErrorNotice(message)
   }
 
+  const removeImage = () => {
+    setAttributes({
+      url: undefined,
+      alt: '',
+      id: undefined,
+    })
+  }
+
+  const onChangeAlt = () => {
+    setAttributes({ alt: newAlt })
+  }
+
   useEffect( () => {
     if(!id && isBlobURL(url)){
       setAttributes({
@@ -57,6 +69,19 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI} ) {
   }, [url]) 
   return (
     <> 
+    <InspectorControls>
+      <PanelBody title={__("Image Settings", "team-members")}>
+        {url && !isBlobURL() && 
+        <TextareaControl 
+          label={__("Alt Text", "team-members")}
+          value={alt}
+          onChange={onChangeAlt}
+          help={__("Alternative text describes your image to people that can't see it. Add a short description with it's key details", "team-members")}
+        />
+        }
+      </PanelBody>
+    </InspectorControls>
+    {url && (
     <BlockControls group="inline">
       <MediaReplaceFlow 
         name={__("Replace Image", "team-members")}
@@ -66,7 +91,13 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI} ) {
         accept="image/*"
         allowedTypes={["image"]}
       />
+      <ToolbarButton
+        onClick={ removeImage }
+      >
+        {__("Remove Image","team-members")}
+      </ToolbarButton>
     </BlockControls>
+    ) }
     <div {...useBlockProps}>
       {
         url && 
