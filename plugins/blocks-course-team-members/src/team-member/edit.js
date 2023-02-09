@@ -1,13 +1,26 @@
 import { useEffect, useState } from "@wordpress/element"
-import { useBlockProps, RichText, MediaPlaceholder, BlockControls, MediaReplaceFlow, InspectorControls } from "@wordpress/block-editor"
+import { useBlockProps, RichText, MediaPlaceholder, BlockControls, MediaReplaceFlow, InspectorControls, store as blockEditorStore } from "@wordpress/block-editor"
 import { __ } from '@wordpress/i18n'
+import { useSelect } from '@wordpress/data'
 import { isBlobURL, revokeBlobURL } from '@wordpress/blob'
-import { Spinner, withNotices, ToolbarButton, PanelBody, TextareaControl } from '@wordpress/components' 
+import { Spinner, withNotices, ToolbarButton, PanelBody, TextareaControl, SelectControl } from '@wordpress/components' 
 
 function Edit( {attributes, setAttributes, noticeOperations, noticeUI} ) {
   
   const {name, bio, url, alt, id} = attributes;
   const [blobURL, setBlobURL] = useState();
+
+  const imageObject = useSelect((select) => {
+    const {getMedia} = select("core")
+    return id ? getMedia(id) : null
+  }, [id])
+
+  // console.log(imageObject)
+  
+  const imageSizes = useSelect((select) => {
+    return select(blockEditorStore).getSettings().imageSizes
+  }, [])
+  // console.log(imageSizes)
 
   const onChangeName = (newName) =>{
     setAttributes({name: newName})
@@ -71,6 +84,23 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI} ) {
     <> 
     <InspectorControls>
       <PanelBody title={__("Image Settings", "team-members")}>
+        {id &&
+          <SelectControl 
+            label={__("Image Size","team-members")} 
+            options={[
+              {
+                label: "Size 1",
+                value: "Value 1"
+              },
+               {
+                label: "Size 2",
+                value: "Value 2"
+              }
+            ]}
+            value="Value 2"
+            onChange={(value) => console.log(value)}
+          />
+        }
         {url && !isBlobURL() && 
         <TextareaControl 
           label={__("Alt Text", "team-members")}
