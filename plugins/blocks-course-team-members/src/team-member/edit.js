@@ -28,7 +28,7 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI} ) {
     const sizes = imageObject.media_details.sizes;
     for(const key in sizes){
       const size = sizes[key]
-      const imageSize = imageSizes.find(s => s.slug === key)
+      const imageSize = imageSizes.find((s) => s.slug === key)
       if(imageSize){
         options.push({
           label: imageSize.name,
@@ -82,6 +82,7 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI} ) {
 
   const onChangeImageSize = (newURL) => {
     setAttributes({url: newURL})
+  }
 
   useEffect( () => {
     if(!id && isBlobURL(url)){
@@ -178,4 +179,4 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI} ) {
   );
 }
 
-export default withNotices(Edit);
+export default withNotices(Edit)

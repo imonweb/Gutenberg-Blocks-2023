@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/edit.js":
@@ -7,7 +8,6 @@
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Edit)
@@ -63,7 +63,6 @@ function Edit(_ref) {
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
@@ -91,7 +90,6 @@ __webpack_require__.r(__webpack_exports__);
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ save)
@@ -120,9 +118,199 @@ function save(_ref) {
 /*!*********************************!*\
   !*** ./src/team-member/edit.js ***!
   \*********************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/src/team-member/edit.js: 'import' and 'export' may only appear at the top level. (181:0)\n\n\u001b[0m \u001b[90m 179 |\u001b[39m }\u001b[0m\n\u001b[0m \u001b[90m 180 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 181 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mdefault\u001b[39m withNotices(\u001b[33mEdit\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    at instantiate (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:64:32)\n    at constructor (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:361:12)\n    at JSXParserMixin.raise (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:3251:19)\n    at JSXParserMixin.parseStatementContent (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:12641:18)\n    at JSXParserMixin.parseStatementLike (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:12535:17)\n    at JSXParserMixin.parseStatementListItem (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:12522:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:13106:61)\n    at JSXParserMixin.parseBlockBody (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:13099:10)\n    at JSXParserMixin.parseBlock (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:13087:10)\n    at JSXParserMixin.parseFunctionBody (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:11905:24)\n    at JSXParserMixin.parseFunctionBodyAndFinish (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:11891:10)\n    at /Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:13237:12\n    at JSXParserMixin.withSmartMixTopicForbiddingContext (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:12215:14)\n    at JSXParserMixin.parseFunction (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:13236:10)\n    at JSXParserMixin.parseFunctionStatement (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:12899:17)\n    at JSXParserMixin.parseStatementContent (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:12567:21)\n    at JSXParserMixin.parseStatementLike (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:12535:17)\n    at JSXParserMixin.parseModuleItem (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:12519:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:13106:36)\n    at JSXParserMixin.parseBlockBody (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:13099:10)\n    at JSXParserMixin.parseProgram (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:12433:10)\n    at JSXParserMixin.parseTopLevel (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:12423:25)\n    at JSXParserMixin.parse (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:14226:10)\n    at parse (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/parser/lib/index.js:14268:38)\n    at parser (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/core/lib/parser/index.js:41:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/core/lib/transformation/normalize-file.js:65:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/core/lib/transformation/index.js:21:50)\n    at run.next (<anonymous>)\n    at transform (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/core/lib/transform.js:22:41)\n    at transform.next (<anonymous>)\n    at step (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/gensync/index.js:261:32)\n    at /Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/gensync/index.js:273:13\n    at async.call.result.err.err (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/gensync/index.js:223:11)\n    at /Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/gensync/index.js:189:28\n    at /Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/@babel/core/lib/gensync-utils/async.js:68:7\n    at /Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/gensync/index.js:113:33\n    at step (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/gensync/index.js:287:14)\n    at /Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/gensync/index.js:273:13\n    at async.call.result.err.err (/Users/imon/Sites/wp/Udemy/GutenbergBlocks2023/wp-content/plugins/blocks-course-team-members/node_modules/gensync/index.js:223:11)");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_blob__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/blob */ "@wordpress/blob");
+/* harmony import */ var _wordpress_blob__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blob__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+function Edit(_ref) {
+  let {
+    attributes,
+    setAttributes,
+    noticeOperations,
+    noticeUI
+  } = _ref;
+  const {
+    name,
+    bio,
+    url,
+    alt,
+    id
+  } = attributes;
+  const [blobURL, setBlobURL] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)();
+  const imageObject = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => {
+    const {
+      getMedia
+    } = select("core");
+    return id ? getMedia(id) : null;
+  }, [id]);
+
+  // console.log(imageObject)
+
+  const imageSizes = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => {
+    return select(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.store).getSettings().imageSizes;
+  }, []);
+  // console.log(imageSizes)
+
+  const getImageSizeOptions = () => {
+    if (!imageObject) return [];
+    const options = [];
+    const sizes = imageObject.media_details.sizes;
+    for (const key in sizes) {
+      const size = sizes[key];
+      const imageSize = imageSizes.find(s => s.slug === key);
+      if (imageSize) {
+        options.push({
+          label: imageSize.name,
+          value: size.source_url
+        });
+      }
+    }
+    return options;
+  };
+  const onChangeName = newName => {
+    setAttributes({
+      name: newName
+    });
+  };
+  const onChangeBio = newBio => {
+    setAttributes({
+      bio: newBio
+    });
+  };
+  const onSelectImage = image => {
+    // console.log(image);
+    if (!image || !image.url) {
+      setAttributes({
+        url: undefined,
+        id: undefined,
+        alt: ''
+      });
+      return;
+    }
+    setAttributes({
+      url: image.url,
+      id: image.id,
+      alt: image.alt
+    });
+  };
+  console.log(url);
+  const onSelectURL = newURL => {
+    setAttributes({
+      url: newURL,
+      id: undefined,
+      alt: ''
+    });
+  };
+  const onUploadError = message => {
+    noticeOperations.removeAllNotices();
+    noticeOperations.createErrorNotice(message);
+  };
+  const removeImage = () => {
+    setAttributes({
+      url: undefined,
+      alt: '',
+      id: undefined
+    });
+  };
+  const onChangeAlt = () => {
+    setAttributes({
+      alt: newAlt
+    });
+  };
+  const onChangeImageSize = newURL => {
+    setAttributes({
+      url: newURL
+    });
+  };
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (!id && (0,_wordpress_blob__WEBPACK_IMPORTED_MODULE_4__.isBlobURL)(url)) {
+      setAttributes({
+        url: undefined,
+        alt: ''
+      });
+    }
+  }, []);
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if ((0,_wordpress_blob__WEBPACK_IMPORTED_MODULE_4__.isBlobURL)(url)) {
+      setBlobURL(url);
+    } else {
+      (0,_wordpress_blob__WEBPACK_IMPORTED_MODULE_4__.revokeBlobURL)(blobURL);
+      setBlobURL();
+    }
+  }, [url]);
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Image Settings", "team-members")
+  }, id && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.SelectControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Image Size", "team-members"),
+    options: getImageSizeOptions(),
+    value: url,
+    onChange: onChangeImageSize
+  }), url && !(0,_wordpress_blob__WEBPACK_IMPORTED_MODULE_4__.isBlobURL)() && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.TextareaControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Alt Text", "team-members"),
+    value: alt,
+    onChange: onChangeAlt,
+    help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Alternative text describes your image to people that can't see it. Add a short description with it's key details", "team-members")
+  }))), url && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.BlockControls, {
+    group: "inline"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaReplaceFlow, {
+    name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Replace Image", "team-members"),
+    onSelect: onSelectImage,
+    onSelectURL: onSelectURL,
+    onError: onUploadError,
+    accept: "image/*",
+    allowedTypes: ["image"]
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToolbarButton, {
+    onClick: removeImage
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Remove Image", "team-members"))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps, url && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: `wp-block-blocks-course-team-member-img${(0,_wordpress_blob__WEBPACK_IMPORTED_MODULE_4__.isBlobURL)(url) ? 'is-loading' : ''}`
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+    src: url,
+    alt: alt
+  }), (0,_wordpress_blob__WEBPACK_IMPORTED_MODULE_4__.isBlobURL)(url) && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.Spinner, null)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.MediaPlaceholder, {
+    icon: "admin-users",
+    onSelect: onSelectImage,
+    onSelectURL: onSelectURL,
+    onError: onUploadError,
+    accept: "image/*",
+    allowedTypes: ["image"],
+    disableMediaButtons: url,
+    notices: noticeUI
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Member Name", "team-member"),
+    tagName: "h4",
+    onChange: onChangeName,
+    value: name,
+    allowedFormats: []
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Member Bio", "team-member"),
+    tagName: "p",
+    onChange: onChangeBio,
+    value: bio,
+    allowedFormats: []
+  })));
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.withNotices)(Edit));
 
 /***/ }),
 
@@ -132,14 +320,12 @@ throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/team-member/edit.js");
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_edit__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/team-member/save.js");
 
 
@@ -182,7 +368,7 @@ __webpack_require__.r(__webpack_exports__);
       attribute: "src"
     }
   },
-  edit: (_edit__WEBPACK_IMPORTED_MODULE_2___default()),
+  edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
   save: _save__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 
@@ -194,7 +380,6 @@ __webpack_require__.r(__webpack_exports__);
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Save)
@@ -237,7 +422,6 @@ function Save(_ref) {
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -250,10 +434,19 @@ __webpack_require__.r(__webpack_exports__);
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
+
+/***/ }),
+
+/***/ "@wordpress/blob":
+/*!******************************!*\
+  !*** external ["wp","blob"] ***!
+  \******************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["blob"];
 
 /***/ }),
 
@@ -263,7 +456,6 @@ __webpack_require__.r(__webpack_exports__);
   \*************************************/
 /***/ ((module) => {
 
-"use strict";
 module.exports = window["wp"]["blockEditor"];
 
 /***/ }),
@@ -274,7 +466,6 @@ module.exports = window["wp"]["blockEditor"];
   \********************************/
 /***/ ((module) => {
 
-"use strict";
 module.exports = window["wp"]["blocks"];
 
 /***/ }),
@@ -285,8 +476,17 @@ module.exports = window["wp"]["blocks"];
   \************************************/
 /***/ ((module) => {
 
-"use strict";
 module.exports = window["wp"]["components"];
+
+/***/ }),
+
+/***/ "@wordpress/data":
+/*!******************************!*\
+  !*** external ["wp","data"] ***!
+  \******************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["data"];
 
 /***/ }),
 
@@ -296,7 +496,6 @@ module.exports = window["wp"]["components"];
   \*********************************/
 /***/ ((module) => {
 
-"use strict";
 module.exports = window["wp"]["element"];
 
 /***/ }),
@@ -307,7 +506,6 @@ module.exports = window["wp"]["element"];
   \******************************/
 /***/ ((module) => {
 
-"use strict";
 module.exports = window["wp"]["i18n"];
 
 /***/ }),
@@ -318,7 +516,6 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-"use strict";
 module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"blocks-course/team-members","version":"0.1.0","title":"Team Members","category":"media","icon":"groups","description":"A Team Members grid.","keywords":["Team","Members","Grid"],"supports":{"html":false},"textdomain":"team-members","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","attributes":{"columns":{"type":"number","default":2}}}');
 
 /***/ })
