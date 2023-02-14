@@ -1,7 +1,8 @@
-import { useEffect, useState } from "@wordpress/element"
+import { useEffect, useState, useRef } from "@wordpress/element"
 import { useBlockProps, RichText, MediaPlaceholder, BlockControls, MediaReplaceFlow, InspectorControls, store as blockEditorStore } from "@wordpress/block-editor"
 import { __ } from '@wordpress/i18n'
 import { useSelect } from '@wordpress/data'
+import {usePrevious} from '@wordpress/compose'
 import { isBlobURL, revokeBlobURL } from '@wordpress/blob'
 import { Spinner, withNotices, ToolbarButton, PanelBody, TextareaControl, SelectControl } from '@wordpress/components' 
 
@@ -9,6 +10,10 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI} ) {
   
   const {name, bio, url, alt, id} = attributes;
   const [blobURL, setBlobURL] = useState();
+
+  const prevURL = usePrevious(url)
+
+  const titleRef = useRef();
 
   const imageObject = useSelect((select) => {
     const {getMedia} = select("core")
@@ -101,6 +106,12 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI} ) {
       setBlobURL();
     }
   }, [url]) 
+
+  useEffect(() => {
+    if(url && !prevURL)
+    titleRef.current.focus()
+  }, [url, prevURL])
+
   return (
     <> 
     <InspectorControls>
@@ -161,6 +172,7 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI} ) {
         notices={noticeUI}
       />
       <RichText 
+        ref={titleRef}
         placeholder={ __("Member Name", "team-member") }
         tagName="h4"
         onChange={onChangeName}
