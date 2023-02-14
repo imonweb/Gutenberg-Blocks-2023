@@ -9,7 +9,8 @@
 	"description": "A Team Members grid.",
 	"keywords": ["Team", "Members", "Grid"],
 	"supports": {
-		"html": false
+		"html": false,
+		"align": ["wide", "full"]
 	},
 	"textdomain": "team-members",
 	"editorScript": "file:./index.js",
