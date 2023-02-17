@@ -196,7 +196,7 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI, isSelecte
               </li>
             )
           })}
-          {isSelected && 
+          {isSelected && (
           <li className="wp-block-blocks-course-team-member-add-icon-li">
             <Tooltip text={__("Add Social Link", "team-members")}>
                <button aria-label={__("Add Social Link", "team-members")}>
@@ -205,7 +205,7 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI, isSelecte
             </Tooltip>
            
           </li>
-          }
+          ) }
         </ul>
       </div>
   </div>
