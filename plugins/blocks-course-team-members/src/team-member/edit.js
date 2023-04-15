@@ -30,7 +30,7 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI, isSelecte
   const getImageSizeOptions = () => {
     if(!imageObject) return [];
     const options = [];
-    const sizes = imageObject. 
+    const sizes = imageObject.media_details.sizes;
     for(const key in sizes){
       const size = sizes[key]
       const imageSize = imageSizes.find((s) => s.slug === key)
