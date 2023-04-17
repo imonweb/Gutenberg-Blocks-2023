@@ -10,6 +10,7 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI, isSelecte
   
   const {name, bio, url, alt, id, socialLinks } = attributes;
   const [blobURL, setBlobURL] = useState();
+  const [selectedLink, setSelectedLink] = useState();
 
   const prevURL = usePrevious(url)
 
@@ -192,7 +193,9 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI, isSelecte
           {socialLinks.map((item, index) => {
             return (
               <li key={index}>
-                <Icon icon={item.icon} />
+                <button aria-label={__("Edit Social Link", "team-members")}>
+                  <Icon icon={item.icon} />
+                </button>
               </li>
             )
           })}
