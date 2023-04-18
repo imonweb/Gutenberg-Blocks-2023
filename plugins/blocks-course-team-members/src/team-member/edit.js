@@ -193,7 +193,11 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI, isSelecte
           {socialLinks.map((item, index) => {
             return (
               <li key={index}>
-                <button aria-label={__("Edit Social Link", "team-members")}>
+                <button aria-label={__(
+                  "Edit Social Link", 
+                  "team-members"
+                  )}
+                >
                   <Icon icon={item.icon} />
                 </button>
               </li>
