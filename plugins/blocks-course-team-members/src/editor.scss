@@ -88,6 +88,10 @@
 							color: #4e4e4e;
 						}
 
+						&.is-selected {
+							outline: 2px solid rgb(208, 40, 227);
+						}
+
 						button {
 							background: none;
 							border: none;
