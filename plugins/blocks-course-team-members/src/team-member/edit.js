@@ -4,7 +4,7 @@ import { __ } from '@wordpress/i18n'
 import { useSelect } from '@wordpress/data'
 import {usePrevious} from '@wordpress/compose'
 import { isBlobURL, revokeBlobURL } from '@wordpress/blob'
-import { Spinner, withNotices, ToolbarButton, PanelBody, TextareaControl, SelectControl, Icon, Tooltip } from '@wordpress/components' 
+import { Spinner, withNotices, ToolbarButton, PanelBody, TextareaControl, SelectControl, Icon, Tooltip, TextControl, Button } from '@wordpress/components' 
 
 function Edit( {attributes, setAttributes, noticeOperations, noticeUI, isSelected} ) {
   
@@ -12,7 +12,8 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI, isSelecte
   const [blobURL, setBlobURL] = useState();
   const [selectedLink, setSelectedLink] = useState();
 
-  const prevURL = usePrevious(url)
+  const prevURL = usePrevious(url);
+  const prevIsSelected = usePrevious(isSelected);
 
   const titleRef = useRef();
 
@@ -82,6 +83,14 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI, isSelecte
     })
   }
 
+  const addNewSocialItem = () => {
+    setAttributes({
+      socialLinks: [...socialLinks, {icon: "wordpress", link: ''}
+      ],
+    });
+    setSelectedLink(socialLinks.length);
+  }
+
   const onChangeAlt = () => {
     setAttributes({ alt: newAlt })
   }
@@ -112,6 +121,12 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI, isSelecte
     if(url && !prevURL)
     titleRef.current.focus()
   }, [url, prevURL])
+
+  useEffect(() => {
+    if(prevIsSelected && !isSelected){
+      setSelectedLink();
+    }
+  }, [isSelected, prevIsSelected])
 
   return (
     <> 
@@ -209,7 +224,10 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI, isSelecte
           {isSelected && (
           <li className="wp-block-blocks-course-team-member-add-icon-li">
             <Tooltip text={__("Add Social Link", "team-members")}>
-               <button aria-label={__("Add Social Link", "team-members")}>
+               <button 
+                  aria-label={__("Add Social Link", "team-members")}
+                  onClick={ addNewSocialItem}
+               >
                  <Icon icon="plus" />
                </button>
             </Tooltip>
@@ -218,6 +236,29 @@ function Edit( {attributes, setAttributes, noticeOperations, noticeUI, isSelecte
           ) }
         </ul>
       </div>
+
+      { selectedLink !== undefined && (
+					<div className="wp-block-blocks-course-team-member-link-form">
+						<TextControl
+							label={ __( 'Icon', 'text-members' ) }
+							value={ socialLinks[ selectedLink ].icon }
+							onChange={ ( icon ) => {
+								updateSocialItem( 'icon', icon );
+							} }
+						/>
+						<TextControl
+							label={ __( 'URL', 'text-members' ) }
+							value={ socialLinks[ selectedLink ].link }
+							onChange={ ( link ) => {
+								updateSocialItem( 'link', link );
+							} }
+						/>
+						<br />
+						<Button isDestructive>
+							{ __( 'Remove Link', 'text-members' ) }
+						</Button>
+					</div>
+				) }
   </div>
   </>
   );
